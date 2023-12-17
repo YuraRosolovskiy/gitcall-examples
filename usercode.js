@@ -1,10 +1,10 @@
 
-// build command: npm install crypto-js
+// build command: npm install uuid
 
-const sha1 = require("crypto-js/sha1");
+const { v4 : uuidv4 } = require('uuid');
 
 module.exports = (data) => {
-    data.res = sha1(data.in).toString(); 
-    
+    data.uuid1 = uuidv4();
+
     return data;
 };
